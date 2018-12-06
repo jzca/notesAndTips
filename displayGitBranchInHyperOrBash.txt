@@ -1,0 +1,54 @@
+Show/Add Git Branch in Bash/Hyper
+
+For Win Users Only
+
+
+Optional
+1. Download and Unzip: http://video.udacity-data.com.s3.amazonaws.com/topher/2017/March/58d31ce3_ud123-udacity-terminal-config/ud123-udacity-terminal-config.zip
+2. Move the Folder into /c/Users/SD05 (Your home directory)
+
+Actions
+1. Code one of the 2 files that is the default to your Hyper/Bash.
+	code .bashrc
+	code .bash_profile
+2. Comment out all other lines, except Your Alias !
+3. Paste Below Codes into rc/profile (#Main starts from Line 26)
+
+# Optional
+# Enable tab completion
+# source ~/udacity-terminal-config/git-completion.bash
+
+# Change command prompt
+# source ~/udacity-terminal-config/git-prompt.sh
+
+# For Line 19 and 22, / Is Already Your SD05 Folder
+
+# Main
+# colors!
+red="\[\033[0;31m\]"
+yellow="\[\033[0;33m\]"
+green="\[\033[0;32m\]"
+blue="\[\033[0;34m\]"
+cyan="\[\033[0;36m\]"
+purple="\[\033[0;35m\]"
+black="\[\033[0;30m\]"
+white="\[\033[0;37m\]"
+reset="\[\033[0m\]"
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$red\u$green\$(__git_ps1)$blue \W
+$ $reset"
+
+# Place your Own Emoji
+# export PS1="$red\u$green\$(__git_ps1)$blue \W
+#😎  $reset"
+
+# More styles of colors: https://gist.github.com/vratiu/9780109
+# For Line 50, some code may not work, ex: #Bold.
+# You may not add 2 styles.
+
+# All copyright received, expect the parts from Udacity and vratiu.
